@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workout/screens/appointment_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -212,7 +213,13 @@ class HomeScreen extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AppointmentScreen(),
+                      ));
+                },
                 child: Container(
                   margin: EdgeInsets.all(10),
                   padding: EdgeInsets.symmetric(vertical: 15),
